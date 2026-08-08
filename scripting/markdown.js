@@ -150,7 +150,7 @@
       const target = resolveTarget(destination, context.path);
       if (!target) return "";
       const externalAttributes = target.external ? ' target="_blank" rel="noopener noreferrer"' : "";
-      return `<a class="doc-card" href="${escapeHtml(target.href)}"${externalAttributes}><strong>${inline(title, context)}</strong><span>${inline(description.trim(), context)}</span><span class="doc-card__arrow" aria-hidden="true">→</span></a>`;
+      return `<a class="doc-card" href="${escapeHtml(target.href)}"${externalAttributes}><strong>${inline(title, context)}</strong><span>${inline(description.trim(), context)}</span><span class="doc-card__arrow" aria-hidden="true">➤</span></a>`;
     }).filter(Boolean).join("");
     return cards ? `<div class="doc-card-grid">${cards}</div>` : "";
   }
